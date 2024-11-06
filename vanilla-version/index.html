@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEGNOC - Telekomünikasyon Yazılımları</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://megnoc.com/img/favicon.png" rel="icon" />
+    <link href="https://megnoc.com/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  </head>
+  <body>
+    <header class="fixed-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo" onclick="window.location.href='https://megnoc.com'">
+            <img src="https://megnoc.com/img/logo2.png" alt="Logo" />
+            <span>MEGNOC</span>
+          </div>
+          <nav>
+            <p>İhtiyaçlarınızı yeni nesil yönetim araçları ve yapay zeka destekli çözümlerimizle dönüştürün.</p>
+          </nav>
+          <button class="btn btn-primary" onclick="openDemoModal()">Demo İsteyin</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-content">
+          <h1>Şirketinizdeki Dijital Dönüşümü
+            <span>MEGNOC</span>
+            ile Yaşayın
+          </h1>
+          <p>İhtiyaçlarınızı yeni nesil yönetim araçları ve yapay zeka destekli çözümlerle dönüştürün.</p>
+          <div class="button-group">
+            <button class="btn btn-primary" onclick="scrollToSolutions()">
+              Çözümlerimizi Keşfedin
+              <svg class="arrow-right" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <button class="btn btn-secondary" onclick="window.open('https://wa.me/905467644667', '_blank')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+              Bize Yazın
+            </button>
+          </div>
+        </div>
+        <div id="floating-cubes"></div>
+      </section>
+
+      <!-- Solutions Section -->
+      <section id="solutions" class="solutions-section">
+        <div class="container">
+          <div class="solutions-grid">
+            <!-- Solutions will be dynamically added here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Other sections will be added here -->
+    </main>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeDemoModal()">&times;</span>
+        <h2>Demo Talebi</h2>
+        <form id="demoForm" onsubmit="handleDemoSubmit(event)">
+          <div class="form-group">
+            <label for="name">Adınız Soyadınız</label>
+            <input type="text" id="name" maxlength="40" autocomplete="off" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon Numaranız</label>
+            <input type="tel" id="phone" maxlength="15" autocomplete="off" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Gönder</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
